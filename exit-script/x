@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+echo "Closing console..."
+
+PPPID=$(awk '{print $4}' "/proc/$PPID/stat")
+kill $PPPID
